@@ -25,21 +25,21 @@ const EmployeeDashboard = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const jobsRes = await axios.get('http://localhost:5577/api/jobs/company', {
+        const jobsRes = await axios.get(`https://jobs-backend-47u0.onrender.com/api/jobs/company`, {
           headers: { token: employeeToken },
         });
         const jobs = jobsRes.data.jobs || [];
         const totalJobs = jobs.length;
         const activeJobs = jobs.filter(job => job.isActive).length;
 
-        const appsRes = await axios.get('http://localhost:5577/api/applications/company', {
+        const appsRes = await axios.get(`https://jobs-backend-47u0.onrender.com/api/applications/company`, {
           headers: { token: employeeToken },
         });
         
         const applications = appsRes.data.applications || [];
         const totalApplications = applications.length;
 
-        const profileRes = await axios.get('http://localhost:5577/api/employee/profile', {
+        const profileRes = await axios.get(`https://jobs-backend-47u0.onrender.com/api/employee/profile`, {
           headers: { token: employeeToken },
         });
        

@@ -34,7 +34,7 @@ const Profile = () => {
   const fetchProfile = async () => {
     setLoading(true);
     try {
-      const { data } = await axios.get('http://localhost:5577/api/employee/profile', {
+      const { data } = await axios.get(`https://jobs-backend-47u0.onrender.com/api/employee/profile`, {
         headers: { token: employeeToken },
       });
       if (data.success) {
@@ -77,7 +77,7 @@ const Profile = () => {
     });
 
     try {
-      const { data } = await axios.put('http://localhost:5577/api/employee/profile', form, {
+      const { data } = await axios.put(`https://jobs-backend-47u0.onrender.com/api/employee/profile`, form, {
         headers: { token: employeeToken, 'Content-Type': 'multipart/form-data' },
       });
       if (data.success) {

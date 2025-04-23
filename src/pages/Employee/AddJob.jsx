@@ -25,7 +25,7 @@ const AddJob = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        'http://localhost:5577/api/jobs/',
+        `https://jobs-backend-47u0.onrender.com/api/jobs/`,
         {
           title,
           description,

@@ -22,7 +22,7 @@ const Login = () => {
 
     try {
       if (role === "Admin") {
-        const response = await axios.post("http://localhost:5577/api/admin/login", {
+        const response = await axios.post(`https://jobs-backend-47u0.onrender.com/api/admin/login`, {
           email,
           password,
         });
@@ -37,7 +37,7 @@ const Login = () => {
 
       } else {
         if (mode === "Login") {
-          const response = await axios.post("http://localhost:5577/api/employee/login", {
+          const response = await axios.post(`https://jobs-backend-47u0.onrender.com/api/employee/login`, {
             email,
             password,
           });
@@ -51,7 +51,7 @@ const Login = () => {
           }
 
         } else {
-          const response = await axios.post("http://localhost:5577/api/employee/signup", {
+          const response = await axios.post(`https://jobs-backend-47u0.onrender.com/api/employee/signup`, {
             companyName,
             email,
             password,

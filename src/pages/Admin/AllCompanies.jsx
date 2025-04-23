@@ -12,7 +12,7 @@ const AllCompanies = () => {
     if (!window.confirm('Are you sure you want to delete this employer?')) return;
     try {
       const response = await axios.delete(
-        `http://localhost:5577/api/admin/employer/${employerId}`,
+        `https://jobs-backend-47u0.onrender.com/api/admin/employer/${employerId}`,
         { headers: { token: adminToken } }
       );
       if (response.data.success) {

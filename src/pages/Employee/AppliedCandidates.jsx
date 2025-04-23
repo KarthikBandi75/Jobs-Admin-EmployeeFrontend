@@ -13,7 +13,7 @@ const AppliedCandidates = () => {
 
   const fetchApplications = async () => {
     try {
-      const response = await axios.get(`http://localhost:5577/api/applications/job/${id}`, {
+      const response = await axios.get(`https://jobs-backend-47u0.onrender.com/api/applications/job/${id}`, {
         headers: { token: employeeToken },
       });
       setCandidates(response.data.applications);
@@ -27,7 +27,7 @@ const AppliedCandidates = () => {
   const updateStatus = async (applicationId, status) => {
     try {
       const response = await axios.put(
-        `http://localhost:5577/api/applications/status/${applicationId}`,
+        `https://jobs-backend-47u0.onrender.com/api/applications/status/${applicationId}`,
         { status },
         { headers: { token: employeeToken } }
       );

@@ -16,7 +16,7 @@ const AuthProvider = ({ children }) => {
 
   const fetchAdminDetails = async () => {
     try {
-      const response = await axios.get("http://localhost:5577/api/admin/users", {
+      const response = await axios.get(`https://jobs-backend-47u0.onrender.com/api/admin/users`, {
         headers: { token: adminToken },
       });
       setAllJobs(response.data.alljobs || []);

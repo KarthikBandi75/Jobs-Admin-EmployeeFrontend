@@ -12,7 +12,7 @@ const AllStudents = () => {
     if (!window.confirm('Are you sure you want to delete this user?')) return;
     try {
       const response = await axios.delete(
-        `http://localhost:5577/api/admin/jobseeker/${userId}`,
+        `https://jobs-backend-47u0.onrender.com/api/admin/jobseeker/${userId}`,
         { headers: { token: adminToken } }
       );
       if (response.data.success) {

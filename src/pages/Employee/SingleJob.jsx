@@ -29,7 +29,7 @@ const SingleJob = () => {
 
   const getJob = async () => {
     try {
-      const res = await axios.get(`http://localhost:5577/api/jobs/${id}`, {
+      const res = await axios.get(`https://jobs-backend-47u0.onrender.com/api/jobs/${id}`, {
         headers: { token: employeeToken },
       });
       if (res.data.success) {
@@ -63,7 +63,7 @@ const SingleJob = () => {
     e.preventDefault();
     try {
       const res = await axios.put(
-        `http://localhost:5577/api/jobs/${id}`,
+        `https://jobs-backend-47u0.onrender.com/api/jobs/${id}`,
         {
           title,
           description,
@@ -95,7 +95,7 @@ const SingleJob = () => {
 
   const handleDelete = async () => {
     try {
-      const res = await axios.delete(`http://localhost:5577/api/jobs/${id}`, {
+      const res = await axios.delete(`https://jobs-backend-47u0.onrender.com/api/jobs/${id}`, {
         headers: { token: employeeToken },
       });
       if (res.data.success) {

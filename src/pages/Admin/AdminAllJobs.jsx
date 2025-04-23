@@ -12,7 +12,7 @@ const AdminAllJobs = () => {
   const handleUpdateJob = async (jobId, updates) => {
     try {
       const response = await axios.put(
-        `http://localhost:5577/api/admin/job/${jobId}`,
+        `https://jobs-backend-47u0.onrender.com/api/admin/job/${jobId}`,
         updates,
         { headers: { token: adminToken } }
       );
@@ -32,7 +32,7 @@ const AdminAllJobs = () => {
     if (!window.confirm('Are you sure you want to delete this job?')) return;
     try {
       const response = await axios.delete(
-        `http://localhost:5577/api/admin/job/${jobId}`,
+        `https://jobs-backend-47u0.onrender.com/api/admin/job/${jobId}`,
         { headers: { token: adminToken } }
       );
       if (response.data.success) {

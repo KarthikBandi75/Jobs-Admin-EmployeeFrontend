@@ -13,7 +13,7 @@ const AllJobs = () => {
 
   const allJobs = async () => {
     try {
-      const res = await axios.get('http://localhost:5577/api/jobs/company', {
+      const res = await axios.get(`https://jobs-backend-47u0.onrender.com/api/jobs/company`, {
         headers: { token: employeeToken },
       });
       if (res.data.success) setJobs(res.data.jobs);

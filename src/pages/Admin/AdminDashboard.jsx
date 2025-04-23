@@ -22,9 +22,9 @@ const AdminDashboard = () => {
   const metrics = [
     { label: 'Total Users', value: totalUsers, icon: <FaUsers className="text-indigo-600 text-3xl" />, link: '/allstudents', color: 'bg-indigo-50' },
     { label: 'Total Employers', value: totalEmployers, icon: <FaBuilding className="text-teal-600 text-3xl" />, link: '/allcompanies', color: 'bg-teal-50' },
-    { label: 'Total Jobs', value: totalJobs, icon: <FaBriefcase className="text-purple-600 text-3xl" />, link: '/alljobs', color: 'bg-purple-50' },
-    { label: 'Active Jobs', value: activeJobs, icon: <FaCheckCircle className="text-green-600 text-3xl" />, link: '/alljobs', color: 'bg-green-50' },
-    { label: 'Suspicious Jobs', value: suspiciousJobs, icon: <FaFlag className="text-yellow-600 text-3xl" />, link: '/alljobs', color: 'bg-yellow-50' },
+    { label: 'Total Jobs', value: totalJobs, icon: <FaBriefcase className="text-purple-600 text-3xl" />, link: '/admin/alljobs', color: 'bg-purple-50' },
+    { label: 'Active Jobs', value: activeJobs, icon: <FaCheckCircle className="text-green-600 text-3xl" />, link: '/admin/alljobs', color: 'bg-green-50' },
+    { label: 'Suspicious Jobs', value: suspiciousJobs, icon: <FaFlag className="text-yellow-600 text-3xl" />, link: '/admin/alljobs', color: 'bg-yellow-50' },
   ];
 
   const chartData = [

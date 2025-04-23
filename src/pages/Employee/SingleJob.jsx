@@ -100,7 +100,7 @@ const SingleJob = () => {
       });
       if (res.data.success) {
         toast.success('Job deleted');
-        navigate('/alljobs');
+        navigate('/employee/alljobs');
       } else {
         toast.error('Failed to delete');
       }

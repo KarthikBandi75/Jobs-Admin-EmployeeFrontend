@@ -19,7 +19,7 @@ const Adminnavbar = () => {
   const navItems = [
     { to: '/admin-dashboard', label: 'Dashboard' },
     { to: '/allcompanies', label: 'Companies' },
-    { to: '/alljobs', label: 'Jobs' },
+    { to: '/admin/alljobs', label: 'Jobs' },
     { to: '/allstudents', label: 'Students' },
   ];
 

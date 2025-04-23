@@ -14,7 +14,7 @@ const EmployeNavbar = () => {
   const navItems = [
     { to: '/employee-dashboard', label: 'Dashboard', icon: <LayoutDashboard size={18} /> },
     { to: '/add-job', label: 'Add Job', icon: <PlusCircle size={18} /> },
-    { to: '/alljobs', label: 'All Jobs', icon: <Briefcase size={18} /> },
+    { to: '/employee/alljobs', label: 'All Jobs', icon: <Briefcase size={18} /> },
     { to: '/employee-profile', label: 'Profile', icon: <User size={18} /> },
   ];
 

@@ -48,7 +48,7 @@ const App = () => {
               <>
               <Route path="/admin-dashboard" element={<AdminDashboard />} />
               <Route path="/allcompanies" element={<AllCompanies/>}/>
-              <Route path="/alljobs" element={<AdminAllJobs/>}/>
+              <Route path="/admin/alljobs" element={<AdminAllJobs/>}/>
               <Route path="/allstudents" element={<AllStudents/>}/>
               </>
             )}
@@ -58,7 +58,7 @@ const App = () => {
                 <Route path="/employee-dashboard" element={<EmployeeDashboard />} />
                 <Route path="/employee-profile" element={<Profile />} />
                 <Route path="/add-job" element={<AddJob />} />
-                <Route path="/alljobs" element={<AllJobs />} />
+                <Route path="/employee/alljobs" element={<AllJobs />} />
                 <Route path="/job/:id" element={<SingleJob />} />
                 <Route path="/applied/:id" element={<AppliedCandidates/>}/>
               </>

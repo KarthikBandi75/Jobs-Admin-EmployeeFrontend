@@ -137,9 +137,9 @@ const EmployeeDashboard = () => {
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6"
         >
           {[
-            { label: 'Total Jobs', value: metrics.totalJobs, icon: <Briefcase className="text-[#0A66C2]" size={24} />, link: '/alljobs' },
-            { label: 'Active Jobs', value: metrics.activeJobs, icon: <Briefcase className="text-[#00A69C]" size={24} />, link: '/alljobs' },
-            { label: 'Applications', value: metrics.totalApplications, icon: <FileText className="text-[#EF4444]" size={24} />, link: '/alljobs' },
+            { label: 'Total Jobs', value: metrics.totalJobs, icon: <Briefcase className="text-[#0A66C2]" size={24} />, link: '/employee/alljobs' },
+            { label: 'Active Jobs', value: metrics.activeJobs, icon: <Briefcase className="text-[#00A69C]" size={24} />, link: '/employee/alljobs' },
+            { label: 'Applications', value: metrics.totalApplications, icon: <FileText className="text-[#EF4444]" size={24} />, link: '/employee/alljobs' },
             { label: 'Profile Completion', value: metrics.profileCompletion, icon: <UserCheck className="text-[#0A66C2]" size={24} />, link: '/employee-profile' },
           ].map((metric, index) => (
             <motion.div
@@ -240,8 +240,8 @@ const EmployeeDashboard = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
             {[
               { label: 'Add New Job', link: '/add-job', color: 'bg-[#0A66C2] hover:bg-[#0958A6]' },
-              { label: 'View All Jobs', link: '/alljobs', color: 'bg-[#00A69C] hover:bg-[#008C84]' },
-              { label: 'Manage Candidates', link: '/alljobs', color: 'bg-[#0A66C2] hover:bg-[#0958A6]' },
+              { label: 'View All Jobs', link: '/employee/alljobs', color: 'bg-[#00A69C] hover:bg-[#008C84]' },
+              { label: 'Manage Candidates', link: '/employee/alljobs', color: 'bg-[#0A66C2] hover:bg-[#0958A6]' },
               { label: 'Edit Profile', link: '/employee-profile', color: 'bg-[#00A69C] hover:bg-[#008C84]' },
             ].map((action, index) => (
               <motion.div

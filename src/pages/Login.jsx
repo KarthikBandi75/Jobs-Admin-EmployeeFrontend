@@ -13,12 +13,14 @@ const Login = () => {
   const [email, setEmail] = useState("jobadmin@gmail.com");
   const [password, setPassword] = useState("qwerty123");
   const [companyName, setCompanyName] = useState("");
+  const [loading, setLoading] = useState(false); // ✅ NEW
 
   const { setAdminToken, setEmployeeToken } = useContext(AuthContext);
   const navigate = useNavigate();
 
   const onSubmitHandler = async (e) => {
     e.preventDefault();
+    setLoading(true); // ✅ Start loading
 
     try {
       if (role === "Admin") {
@@ -69,6 +71,8 @@ const Login = () => {
     } catch (error) {
       console.error("Error during auth:", error);
       toast.error("Something went wrong.");
+    } finally {
+      setLoading(false); // ✅ Stop loading
     }
   };
 
@@ -113,15 +117,26 @@ const Login = () => {
           />
 
           <motion.button
-            className="w-full py-3 font-bold bg-purple-500 rounded-xl hover:bg-purple-600 focus:outline-none cursor-pointer"
+            className={`w-full py-3 font-bold rounded-xl cursor-pointer flex items-center justify-center ${
+              loading ? 'bg-purple-400 cursor-not-allowed' : 'bg-purple-500 hover:bg-purple-600'
+            }`}
             type="submit"
+            disabled={loading}
           >
-            {mode}
+            {loading ? (
+              <motion.div
+                className="w-6 h-6 border-4 border-white border-t-transparent rounded-full animate-spin"
+                initial={{ rotate: 0 }}
+                animate={{ rotate: 360 }}
+                transition={{ repeat: Infinity, duration: 1, ease: "linear" }}
+              />
+            ) : (
+              mode
+            )}
           </motion.button>
         </form>
 
         <div className="mt-4 text-center space-y-2">
-          {/* Role Switch */}
           <p>
             {role === "Admin" ? "Employee?" : "Admin?"}{" "}
             <span
@@ -130,8 +145,6 @@ const Login = () => {
                 const newRole = role === "Admin" ? "Employee" : "Admin";
                 setRole(newRole);
                 setMode("Login");
-
-                // Autofill or reset fields
                 if (newRole === "Admin") {
                   setEmail("jobadmin@gmail.com");
                   setPassword("qwerty123");
@@ -147,7 +160,6 @@ const Login = () => {
             </span>
           </p>
 
-          {/* Mode Switch (only for Employee) */}
           {role === "Employee" && (
             <p>
               {mode === "Login" ? "New Employer?" : "Already have an account?"}{" "}

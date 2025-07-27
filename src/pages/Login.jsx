@@ -174,7 +174,7 @@ const Login = () => {
 
           <div className="mt-2 text-center">
                     <p>
-                        Admin Login?{" "}   
+                        User Login?{" "}   
                         <span
                             className="text-blue-400 cursor-pointer hover:underline"
                           
